@@ -1,0 +1,4 @@
+sample_id,patient_id,fastq_r1,fastq_r2,tumor_purity,panel_mb
+SAMPLE01,P001,data/raw/fastq/SAMPLE01_R1.fastq.gz,data/raw/fastq/SAMPLE01_R2.fastq.gz,0.60,1.65
+SAMPLE02,P002,data/raw/fastq/SAMPLE02_R1.fastq.gz,data/raw/fastq/SAMPLE02_R2.fastq.gz,0.55,1.65
+SAMPLE03,P003,data/raw/fastq/SAMPLE03_R1.fastq.gz,data/raw/fastq/SAMPLE03_R2.fastq.gz,0.70,1.65

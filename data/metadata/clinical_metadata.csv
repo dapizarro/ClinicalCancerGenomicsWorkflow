@@ -1,0 +1,4 @@
+sample_id,patient_id,age,stage,grade,treatment,follow_up_months,relapse,death,os_months,rfs_months
+SAMPLE01,P001,52,IC,high,platinum,120,0,0,120,120
+SAMPLE02,P002,66,IIA,high,platinum,72,1,1,72,36
+SAMPLE03,P003,58,IC,high,platinum,95,0,0,95,95

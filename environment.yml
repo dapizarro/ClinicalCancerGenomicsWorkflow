@@ -1,0 +1,37 @@
+name: clinical-cancer-genomics
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - snakemake>=8
+  - pandas
+  - numpy
+  - scipy
+  - biopython
+  - pyyaml
+  - matplotlib
+  - seaborn
+  - fastqc
+  - multiqc
+  - fastp
+  - bwa
+  - samtools
+  - bcftools
+  - htslib
+  - bedtools
+  - vcftools
+  - picard
+  - tabix
+  - ensembl-vep
+  - r-base>=4.3
+  - r-tidyverse
+  - r-survival
+  - r-survminer
+  - r-broom
+  - r-ggplot2
+  - r-ggpubr
+  - r-rmarkdown
+  - r-knitr
+  - r-pheatmap

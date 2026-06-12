@@ -1,0 +1,31 @@
+configfile: "config/config.yaml"
+
+import pandas as pd
+
+samples = pd.read_csv(config["samplesheet"])
+SAMPLES = samples["sample_id"].tolist()
+
+rule all:
+    input:
+        "results/qc/multiqc_report.html",
+        expand("results/bam/{sample}.sorted.dedup.bam.bai", sample=SAMPLES),
+        expand("results/variants/{sample}.filtered.vcf.gz", sample=SAMPLES),
+        expand("results/annotation/{sample}.annotated.tsv", sample=SAMPLES),
+        expand("results/prioritized/{sample}.prioritized.tsv", sample=SAMPLES),
+        "results/tmb/tmb_summary.tsv",
+        "results/integration/master_clinical_genomics_table.tsv",
+        "results/survival/cox_multivariate_results.tsv",
+        "results/reports/final_report.html"
+
+include: "workflow/rules/qc.smk"
+include: "workflow/rules/trimming.smk"
+include: "workflow/rules/alignment.smk"
+include: "workflow/rules/bam_processing.smk"
+include: "workflow/rules/variant_calling.smk"
+include: "workflow/rules/variant_filtering.smk"
+include: "workflow/rules/annotation.smk"
+include: "workflow/rules/prioritization.smk"
+include: "workflow/rules/tmb.smk"
+include: "workflow/rules/integration.smk"
+include: "workflow/rules/survival.smk"
+include: "workflow/rules/report.smk"

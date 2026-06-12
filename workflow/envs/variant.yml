@@ -1,0 +1,2 @@
+channels: [conda-forge, bioconda]
+dependencies: [bcftools, htslib, samtools, tabix]

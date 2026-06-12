@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: ClinicalCancerGenomicsWorkflow
+message: If you use this workflow, please cite the repository DOI or the associated publication.
+type: software
+authors:
+  - family-names: Pizarro
+    given-names: David
+license: MIT
+version: 0.1.0

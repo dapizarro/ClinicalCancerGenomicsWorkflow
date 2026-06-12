@@ -1,0 +1,51 @@
+project: ClinicalCancerGenomicsWorkflow
+
+samplesheet: data/metadata/samplesheet.csv
+clinical_metadata: data/metadata/clinical_metadata.csv
+immune_metadata: data/metadata/immune_markers.csv
+
+reference:
+  build: hg38
+  genome_fasta: data/reference/hg38.fa
+  known_sites_vcf: data/reference/known_sites.vcf.gz
+
+fastq:
+  directory: data/raw/fastq
+  r1_suffix: _R1.fastq.gz
+  r2_suffix: _R2.fastq.gz
+
+alignment:
+  bwa_threads: 8
+
+filtering:
+  min_depth: 50
+  min_alt_depth: 10
+  min_vaf: 0.05
+  max_population_af: 0.01
+  keep_pass_only: true
+
+annotation:
+  clinvar_tsv: resources/databases/clinvar_minimal.tsv
+  population_tsv: resources/databases/population_frequency_minimal.tsv
+  cancer_gene_panel: resources/panels/cancer_genes.tsv
+  hrd_gene_panel: resources/panels/hrd_genes.tsv
+  priority_gene_panel: resources/panels/priority_genes.tsv
+
+biomarkers:
+  brca_genes:
+    - BRCA1
+    - BRCA2
+  tmb_high_cutoff: 10
+
+survival:
+  os_time: os_months
+  os_event: death
+  rfs_time: rfs_months
+  rfs_event: relapse
+  covariates:
+    - age
+    - stage
+    - cd8_intraepithelial_group
+    - cd4_intraepithelial_group
+    - brca_status
+    - tmb_group

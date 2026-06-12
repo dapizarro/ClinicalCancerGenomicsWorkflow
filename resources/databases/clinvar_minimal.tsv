@@ -1,0 +1,4 @@
+chrom	pos	ref	alt	gene	clinical_significance	review_status
+17	43071077	A	G	BRCA1	Pathogenic	reviewed_by_expert_panel
+13	32316461	C	T	BRCA2	Likely_pathogenic	criteria_provided
+17	7674220	G	A	TP53	Pathogenic	criteria_provided
