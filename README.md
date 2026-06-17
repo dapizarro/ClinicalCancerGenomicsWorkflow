@@ -5,7 +5,16 @@
 The project is designed for translational cancer genomics studies where genomic biomarkers are integrated with pathology, immune markers, and clinical outcome data. It was conceptually inspired by early-stage high-grade serous ovarian carcinoma studies integrating BRCA1/2 mutation status, TMB, PD-L1, tumour-infiltrating lymphocytes and survival outcomes.
 
 > Patient-level data are **not included**. The repository contains synthetic example metadata and toy FASTQ placeholders only. Use it with protected local clinical datasets.
+---
+## Scientific Background
 
+This repository was developed from bioinformatics and statistical analysis workflows applied to the study of molecular and immune prognostic factors in ovarian cancer. The analytical framework implemented here builds upon experience gained during the following study:
+> Pizarro D., et al . (2023) The Prognostic Significance of Tumor-Infiltrating Lymphocytes, PD-L1, BRCA Mutation Status and Tumor Mutational Burden in Early-Stage High-Grade Serous Ovarian Carcinoma—A Study by the Spanish Group for Ovarian Cancer Research (GEICO).
+International Journal of Molecular Sciences 24(13):11183.
+
+This study integrated histopathological, immunological, genomic and clinical data to investigate prognostic biomarkers in early-stage high-grade serous ovarian carcinoma, including tumor-infiltrating lymphocytes (TILs), PD-L1 expression, BRCA mutational status and tumor mutational burden (TMB).
+
+The workflows implemented in this repository generalize and extend several of the analytical strategies used during this project, providing a reproducible framework for transcriptomic, genomic and clinical association analyses.
 ---
 
 ## What the workflow does
@@ -234,32 +243,17 @@ sample_id,brca1_status,brca2_status,hrd_gene_mutated,tmb,tmb_group
 ```
 
 ---
+## Project Status
 
-## Recommended GitHub repository settings
+### Active Development
 
-**Repository name**
-
-```text
-ClinicalCancerGenomicsWorkflow
-```
-
-**Description**
-
-```text
-Reproducible workflow for cancer NGS analysis from FASTQ to variant annotation, biomarker prioritisation and clinical survival modelling.
-```
-
-**Topics**
-
-```text
-cancer-genomics, ngs, variant-calling, clinvar, tmb, survival-analysis, brca, bioinformatics, snakemake, precision-oncology
-```
+This repository consolidates analytical workflows developed across multiple cancer genomics and transcriptomics projects. While individual components have been applied in peer-reviewed publications, the complete integrated workflow has not been published as a standalone software resource. The repository is actively maintained and will continue to evolve as new analyses and methodological improvements are incorporated.
 
 ---
 
 ## Citation
 
-If you use this repository, please cite the associated publication or Zenodo DOI once available.
+If you use this repository, please cite the Zenodo DOI: https://doi.org/10.5281/zenodo.20700500
 
 ---
 
